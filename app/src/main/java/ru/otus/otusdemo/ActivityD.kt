@@ -10,12 +10,7 @@ class ActivityD : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
-        val button = findViewById<Button>(R.id.secondActivityButton)
-        button.setOnClickListener {
-            val intent = Intent(applicationContext, ActivityD::class.java)
-            startActivity(intent)
-        }
+        setContentView(R.layout.activity_d)
     }
 
     override fun onNewIntent(intent: Intent?) {

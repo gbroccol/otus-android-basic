@@ -10,10 +10,10 @@ class ActivityB : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_second)
-        val button = findViewById<Button>(R.id.secondActivityButton)
+        setContentView(R.layout.activity_b)
+        val button = findViewById<Button>(R.id.buttonToActivityC)
         button.setOnClickListener {
-            val intent = Intent(applicationContext, ActivityB::class.java)
+            val intent = Intent(applicationContext, ActivityC::class.java)
             startActivity(intent)
         }
     }
