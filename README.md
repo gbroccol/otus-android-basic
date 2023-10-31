@@ -20,7 +20,7 @@
 
 - [ ] По клику на кнопку “Open ActivityB” запустите **ActivityB** в отдельном стеке, при этом предусмотрите возможность открывать другие Activity в том же стеке где расположена **ActivityA**
       
-      <img src="readme_image/01.png" alt="Untitled" height="300"/>
+<img src="readme_image/01.png" alt="Untitled" height="300"/>
 
 - [ ] По клику на кнопку “Open ActivityC” запустите **ActivityC** в том же стеке, в котором расположена **ActivityB**
       <img src="readme_image/02.png" alt="Untitled" height="300"/>
