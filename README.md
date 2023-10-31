@@ -21,22 +21,17 @@
 - [ ] По клику на кнопку “Open ActivityB” запустите **ActivityB** в отдельном стеке, при этом предусмотрите возможность открывать другие Activity в том же стеке где расположена **ActivityA**
       ![Untitled](readme_image/01.png)
 
-1. По клику на кнопку “Open ActivityC” запустите **ActivityC** в том же стеке, в котором расположена **ActivityB**
+- [ ] По клику на кнопку “Open ActivityC” запустите **ActivityC** в том же стеке, в котором расположена **ActivityB**
+      ![Untitled](readme_image/02.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9640ab5c-e52c-4434-9842-d7e2d6a0d3f9/Untitled.png)
+- [ ] По клику на кнопку “Open ActivityA” запустите **ActivityA**, таким образом, чтобы мы попали на существующий экземпляр  **ActivityA** и у него был вызван метод `onNewIntent`, независимо от того находится **ActivityA** наверху своего стека или нет
+      ![Untitled](readme_image/03.png)
 
-1. По клику на кнопку “Open ActivityA” запустите **ActivityA**, таким образом, чтобы мы попали на существующий экземпляр  **ActivityA** и у него был вызван метод `onNewIntent`, независимо от того находится **ActivityA** наверху своего стека или нет
+- [ ] По клику на кнопку “Open ActivityD” запустите **ActivityD** в том же стеке, где расположены **ActivityB** и **ActivityC**, при этом завершите все предыдущие Activity, которые находятся в текущем стеке
+      ![Untitled](readme_image/04.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6afbcfa7-2745-4c68-ba2f-4aff9057aed6/Untitled.png)
+- [ ] По клику на кнопку “CloseActivityC”, завершите **ActivityC**, и перейдите на предыдущий экран в стеке
+      ![Untitled](readme_image/05.png)
 
-1. По клику на кнопку “Open ActivityD” запустите **ActivityD** в том же стеке, где расположены **ActivityB** и **ActivityC**, при этом завершите все предыдущие Activity, которые находятся в текущем стеке
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e06f3d4b-d473-4b14-ac26-afb731c91d14/Untitled.png)
-
-1. По клику на кнопку “CloseActivityC”, завершите **ActivityC**, и перейдите на предыдущий экран в стеке
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/871065c8-93f1-4058-be1d-c6e424e4ef36/Untitled.png)
-
-1. По клику на кнопку “Close Stack” завершите текущий стек, в котором находятся **ActivityB** и **ActivityC**, и перейдите на **ActivityA**
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/263a0493-54e5-4a55-bbc0-7efa2ddbb941/Untitled.png)
+- [ ] По клику на кнопку “Close Stack” завершите текущий стек, в котором находятся **ActivityB** и **ActivityC**, и перейдите на **ActivityA**
+      ![Untitled](readme_image/06.png)
