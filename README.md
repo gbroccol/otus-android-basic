@@ -18,9 +18,8 @@
 
 ### Задание #2
 
-1. По клику на кнопку “Open ActivityB” запустите **ActivityB** в отдельном стеке, при этом предусмотрите возможность открывать другие Activity в том же стеке где расположена **ActivityA**
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0a8991f1-c9c3-42e8-aecc-852461eed8c9/Untitled.png)
+- [ ] По клику на кнопку “Open ActivityB” запустите **ActivityB** в отдельном стеке, при этом предусмотрите возможность открывать другие Activity в том же стеке где расположена **ActivityA**
+      ![Untitled](readme_image/01.png)
 
 1. По клику на кнопку “Open ActivityC” запустите **ActivityC** в том же стеке, в котором расположена **ActivityB**
 
