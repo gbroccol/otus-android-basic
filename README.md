@@ -5,9 +5,9 @@
 ### Задание #1
 
 1. Cоздайте 4 класса Activity и назовите их **ActivityA**-**ActivityD**.
-    - [ ] В layout файл **ActivityA** добавьте кнопку с текстом “Open ActivityB”
-    - [ ] В layout файл **ActivityB** добавьте кнопку с текстом “Open ActivityC”
-    - [ ] В layout файл **ActivityC** добавьте кнопки с текстом “Open ActivityA”, “Open ActivityD”, “Close ActivityC”, “Close Stack”
+    - [x] В layout файл **ActivityA** добавьте кнопку с текстом “Open ActivityB”
+    - [x] В layout файл **ActivityB** добавьте кнопку с текстом “Open ActivityC”
+    - [x] В layout файл **ActivityC** добавьте кнопки с текстом “Open ActivityA”, “Open ActivityD”, “Close ActivityC”, “Close Stack”
 2. Покрасьте бекграунды Activity: **ActivityA** в `#f44336`, **ActivityB** в `#4caf50,` **ActivityC** в `#2196f3`, **ActivityD** в `#ffeb3b`
 
     <aside>
