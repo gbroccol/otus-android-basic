@@ -19,22 +19,19 @@
 ### Задание #2
 
 - [ ] По клику на кнопку “Open ActivityB” запустите **ActivityB** в отдельном стеке, при этом предусмотрите возможность открывать другие Activity в том же стеке где расположена **ActivityA**
-      ![Untitled](readme_image/01.png)
-
-<img src="readme_image/01.png" alt="Untitled" height="50"/>
-
+      <img src="readme_image/01.png" alt="Untitled" height="300"/>
 
 - [ ] По клику на кнопку “Open ActivityC” запустите **ActivityC** в том же стеке, в котором расположена **ActivityB**
-      ![Untitled](readme_image/02.png)
+      <img src="readme_image/02.png" alt="Untitled" height="300"/>
 
 - [ ] По клику на кнопку “Open ActivityA” запустите **ActivityA**, таким образом, чтобы мы попали на существующий экземпляр  **ActivityA** и у него был вызван метод `onNewIntent`, независимо от того находится **ActivityA** наверху своего стека или нет
-      ![Untitled](readme_image/03.png)
+      <img src="readme_image/03.png" alt="Untitled" height="300"/>
 
 - [ ] По клику на кнопку “Open ActivityD” запустите **ActivityD** в том же стеке, где расположены **ActivityB** и **ActivityC**, при этом завершите все предыдущие Activity, которые находятся в текущем стеке
-      ![Untitled](readme_image/04.png)
+      <img src="readme_image/04.png" alt="Untitled" height="300"/>
 
 - [ ] По клику на кнопку “CloseActivityC”, завершите **ActivityC**, и перейдите на предыдущий экран в стеке
-      ![Untitled](readme_image/05.png)
+      <img src="readme_image/05.png" alt="Untitled" height="300"/>
 
 - [ ] По клику на кнопку “Close Stack” завершите текущий стек, в котором находятся **ActivityB** и **ActivityC**, и перейдите на **ActivityA**
-      ![Untitled](readme_image/06.png)
+      <img src="readme_image/06.png" alt="Untitled" height="300"/>
