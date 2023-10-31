@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ru.otus.otusdemo" >
 
-    <uses-permission android:name="android.permission.CAMERA" />
+<!--    <uses-permission android:name="android.permission.CAMERA" />-->
 
     <application
         android:name=".OtusApplication"
@@ -18,7 +18,7 @@
         tools:targetApi="31" >
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ActivityA"
             android:exported="true"
             android:launchMode="standard">
             <intent-filter>
@@ -27,11 +27,21 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ActivityB"
+            android:launchMode="singleTask"
+            android:exported="false" />
 
         <activity
+            android:name=".ActivityC"
             android:launchMode="singleTask"
-            android:name=".SecondActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".ActivityD"
+            android:launchMode="singleTask"
+            android:exported="false" />
+
     </application>
 
 </manifest>
