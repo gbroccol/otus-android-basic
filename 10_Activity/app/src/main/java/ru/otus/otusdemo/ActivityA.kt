@@ -19,7 +19,7 @@ class ActivityA : AppCompatActivity() {
         // в том же стеке где расположена ActivityA
         buttonOpenActivityB.setOnClickListener {
             val intent = Intent(this, ActivityB::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_MULTIPLE_TASK) // ?
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
     }
