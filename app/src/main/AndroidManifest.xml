@@ -29,18 +29,18 @@
 
         <activity
             android:name=".ActivityB"
-            android:launchMode="singleTask"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity="stack.two" />
 
         <activity
             android:name=".ActivityC"
-            android:launchMode="singleTask"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity="stack.two" />
 
         <activity
             android:name=".ActivityD"
-            android:launchMode="singleTask"
-            android:exported="false" />
+            android:exported="false"
+            android:taskAffinity="stack.two" />
 
     </application>
 

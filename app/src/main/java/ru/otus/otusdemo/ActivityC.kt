@@ -8,42 +8,57 @@ import android.widget.Toast
 
 class ActivityC : AppCompatActivity() {
 
+    private val buttonOpenActivityA by lazy { findViewById<Button>(R.id.buttonOpenActivityA) }
+    private val buttonOpenActivityD by lazy { findViewById<Button>(R.id.buttonOpenActivityD) }
+    private val buttonCloseActivityC by lazy { findViewById<Button>(R.id.buttonCloseActivityC) }
+    private val buttonCloseStack by lazy { findViewById<Button>(R.id.buttonCloseStack) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_c)
 
-        val buttonA = findViewById<Button>(R.id.buttonToActivityA)
-        buttonA.setOnClickListener {
-            val intent = Intent(applicationContext, ActivityA::class.java)
+        // По клику на кнопку “Open ActivityA” запустите ActivityA, таким образом, чтобы мы попали
+        // на существующий экземпляр ActivityA и у него был вызван метод onNewIntent, независимо от
+        // того находится ActivityA наверху своего стека или нет
+        buttonOpenActivityA.setOnClickListener {
+            val intent = Intent(this, ActivityA::class.java)
             startActivity(intent)
         }
 
-        val buttonC = findViewById<Button>(R.id.buttonToActivityC)
-        buttonC.setOnClickListener {
-            val intent = Intent(applicationContext, ActivityC::class.java)
+        // По клику на кнопку “Open ActivityD” запустите ActivityD в том же стеке, где расположены
+        // ActivityB и ActivityC, при этом завершите все предыдущие Activity, которые находятся
+        // в текущем стеке
+        buttonOpenActivityD.setOnClickListener {
+            val intent = Intent(this, ActivityD::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
         }
 
-
-        val buttonD = findViewById<Button>(R.id.buttonToActivityD)
-        buttonD.setOnClickListener {
-            val intent = Intent(applicationContext, ActivityD::class.java)
-            startActivity(intent)
+        // По клику на кнопку “CloseActivityC”, завершите ActivityC, и перейдите на предыдущий экран в стеке
+        buttonCloseActivityC.setOnClickListener {
+            finish()
         }
 
-        val buttonCloseStack = findViewById<Button>(R.id.buttonCloseStack)
+        // По клику на кнопку “Close Stack” завершите текущий стек, в котором находятся
+        // ActivityB и ActivityC, и перейдите на ActivityA
         buttonCloseStack.setOnClickListener {
-
+            finishAffinity()
         }
     }
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
-        Toast.makeText(this, "onNewIntent", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "onNewIntent (ActivityC)", Toast.LENGTH_SHORT).show()
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
-        Toast.makeText(this, "Кнопка бэк была нажата", Toast.LENGTH_SHORT).show()
+        // Toast.makeText(this, "Кнопка бэк была нажата (ActivityC)", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Toast.makeText(this, "ActivityC onDestroy", Toast.LENGTH_SHORT).show()
     }
 }

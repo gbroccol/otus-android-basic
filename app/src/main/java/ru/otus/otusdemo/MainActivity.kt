@@ -18,11 +18,12 @@ class MainActivity : AppCompatActivity() {
     // взаимодействовать с интерфейсом
     override fun onStart() {
         super.onStart()
+
         val button = findViewById<Button>(R.id.buttonSecondActivity)
         button.setOnClickListener {
 
-//            val id = (applicationContext as OtusApplication).id
-//            Toast.makeText(this, "Кнопка была нажата", Toast.LENGTH_SHORT).show()
+            // val id = (applicationContext as OtusApplication).id
+            // Toast.makeText(this, "Кнопка была нажата", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(applicationContext, SecondActivity::class.java)
             startActivity(intent)

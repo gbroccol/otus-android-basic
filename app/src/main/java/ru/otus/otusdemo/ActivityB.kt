@@ -8,23 +8,32 @@ import android.widget.Toast
 
 class ActivityB : AppCompatActivity() {
 
+    private val buttonOpenActivityC by lazy { findViewById<Button>(R.id.buttonOpenActivityC) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_b)
-        val button = findViewById<Button>(R.id.buttonToActivityC)
-        button.setOnClickListener {
-            val intent = Intent(applicationContext, ActivityC::class.java)
+
+        // По клику на кнопку “Open ActivityC” запустите ActivityC
+        // в том же стеке, в котором расположена ActivityB
+        buttonOpenActivityC.setOnClickListener {
+            val intent = Intent(this, ActivityC::class.java)
             startActivity(intent)
         }
     }
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
-        Toast.makeText(this, "onNewIntent", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "onNewIntent (ActivityB)", Toast.LENGTH_SHORT).show()
     }
 
     override fun onBackPressed() {
         super.onBackPressed()
-        Toast.makeText(this, "Кнопка бэк была нажата", Toast.LENGTH_SHORT).show()
+        // Toast.makeText(this, "Кнопка бэк была нажата (ActivityB)", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Toast.makeText(this, "ActivityB onDestroy", Toast.LENGTH_SHORT).show()
     }
 }
