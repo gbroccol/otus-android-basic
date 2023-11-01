@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 
-
 class ActivityA : AppCompatActivity() {
 
     private val buttonOpenActivityB by lazy { findViewById<Button>(R.id.buttonOpenActivityB) }
