@@ -19,10 +19,13 @@ class ActivityA : AppCompatActivity() {
         // в отдельном стеке, при этом предусмотрите возможность открывать другие Activity
         // в том же стеке где расположена ActivityA
         buttonOpenActivityB.setOnClickListener {
-            val intent = Intent(this, ActivityB::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            val intent = Intent(this, ActivityB::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            }
             startActivity(intent)
         }
+
+        Toast.makeText(this, "ActivityA - onCreate", Toast.LENGTH_SHORT).show()
     }
 
     override fun onNewIntent(intent: Intent?) {
